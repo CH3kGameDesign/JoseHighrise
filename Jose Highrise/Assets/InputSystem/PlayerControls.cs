@@ -62,6 +62,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2d83463-bcc2-4001-acbb-1942145a82e1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -273,6 +282,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ea2652e-7766-4922-b1f4-095910ec0fc5"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -285,6 +305,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_General_Swap = m_General.FindAction("Swap", throwIfNotFound: true);
         m_General_Vertical = m_General.FindAction("Vertical", throwIfNotFound: true);
         m_General_Jump = m_General.FindAction("Jump", throwIfNotFound: true);
+        m_General_Click = m_General.FindAction("Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -348,6 +369,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_General_Swap;
     private readonly InputAction m_General_Vertical;
     private readonly InputAction m_General_Jump;
+    private readonly InputAction m_General_Click;
     public struct GeneralActions
     {
         private @PlayerControls m_Wrapper;
@@ -356,6 +378,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Swap => m_Wrapper.m_General_Swap;
         public InputAction @Vertical => m_Wrapper.m_General_Vertical;
         public InputAction @Jump => m_Wrapper.m_General_Jump;
+        public InputAction @Click => m_Wrapper.m_General_Click;
         public InputActionMap Get() { return m_Wrapper.m_General; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -377,6 +400,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_GeneralActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_GeneralActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_GeneralActionsCallbackInterface.OnJump;
+                @Click.started -= m_Wrapper.m_GeneralActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_GeneralActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_GeneralActionsCallbackInterface.OnClick;
             }
             m_Wrapper.m_GeneralActionsCallbackInterface = instance;
             if (instance != null)
@@ -393,6 +419,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
             }
         }
     }
@@ -403,5 +432,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnSwap(InputAction.CallbackContext context);
         void OnVertical(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
     }
 }
