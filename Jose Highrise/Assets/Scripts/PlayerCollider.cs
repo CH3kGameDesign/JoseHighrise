@@ -21,4 +21,8 @@ public class PlayerCollider : MonoBehaviour
     {
         M_player.TriggerStay(other);
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        M_player.CollisionStay(collision);
+    }
 }

@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: 0a10e6c98c74078478da1112f28f06da
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Locked_Blue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8a3352a821deb489a98058f96d30ce
+      internalID: -711279043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f87fa65ad24be04baf84fc6845b5ff6
+      internalID: 161895576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46a2ba4abe555f47a68e786b131b8a8
+      internalID: 735494766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744d8c8d4bf6463458c7f187aaf253f1
+      internalID: 1625171716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16c636ef94d67541a8a6228f74f1f3b
+      internalID: 1025064833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_5
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91a2f7409b381c44818d44cb7cf7fc9
+      internalID: 1387846432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c44a0895aaad84cb65a7e4a8e343e1
+      internalID: 1735315191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f094003cd918c8744ae979d1b2ae5a51
+      internalID: -1455695023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0f68ae93acd844baf59145dc6e0610
+      internalID: -1040021227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0f9918cd5b56643897f12f797590d0
+      internalID: -466932100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_10
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358dc2b340d5722448f2cfa6460b2ea0
+      internalID: 284070419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_11
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e1d3fafb52b6f499484567fb367bd6
+      internalID: -408013533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f5885591a3eda4abb7fa2a5f84697a
+      internalID: 8809167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf0bc4a859355341a4b5cb5e5b7619d
+      internalID: -700002187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5291973ea9055448e2c5c85af9d87a
+      internalID: -1552359559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25a704b2da321f4080efc50b1d1bbfb
+      internalID: -1466603838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea22a86c6b312f6419dce583c35972fe
+      internalID: -984853247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9910bd0d71ef41d4b8ca3ecbe8efe86d
+      internalID: 2113827363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3279b3fcd04004f94e9d2f52fdede6
+      internalID: 362570576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776ad193986f3a746a4274d4d0d487c4
+      internalID: -133323903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f63d93d7fdb3845a839882249fa022
+      internalID: -408569969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_21
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf87378f49f34564cbee3eba6be7843b
+      internalID: -1884663231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b427136c3640c74ea764a44a5c7fcc0
+      internalID: -1452221219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a278653550be7914a9b195ee9dd65ff9
+      internalID: -1182866124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653f0babb9419e949a7108cfbd1b5085
+      internalID: 1038747091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591f2fbd3d741cc429aa202eecbf6754
+      internalID: -1868607642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd416f9d36e9a34a89ec7f93213a1bf
+      internalID: -1196226299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bade204af2751542ba85c5687f16390
+      internalID: -2054510303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8270aca99a34e234b81165c0e08a07f4
+      internalID: 780182752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Blue_29
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22aa1b4408183641b13eb6170a21999
+      internalID: -871925294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a051f008f4460204c88c37bf3a77a6fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Locked_Blue_9: -466932100
+      Locked_Blue_25: -1868607642
+      Locked_Blue_17: 2113827363
+      Locked_Blue_18: 362570576
+      Locked_Blue_0: -711279043
+      Locked_Blue_6: 1735315191
+      Locked_Blue_1: 161895576
+      Locked_Blue_27: -2054510303
+      Locked_Blue_3: 1625171716
+      Locked_Blue_7: -1455695023
+      Locked_Blue_2: 735494766
+      Locked_Blue_26: -1196226299
+      Locked_Blue_5: 1387846432
+      Locked_Blue_8: -1040021227
+      Locked_Blue_14: -1552359559
+      Locked_Blue_20: -408569969
+      Locked_Blue_15: -1466603838
+      Locked_Blue_29: -871925294
+      Locked_Blue_28: 780182752
+      Locked_Blue_21: -1884663231
+      Locked_Blue_16: -984853247
+      Locked_Blue_23: -1182866124
+      Locked_Blue_10: 284070419
+      Locked_Blue_19: -133323903
+      Locked_Blue_4: 1025064833
+      Locked_Blue_24: 1038747091
+      Locked_Blue_12: 8809167
+      Locked_Blue_13: -700002187
+      Locked_Blue_11: -408013533
+      Locked_Blue_22: -1452221219
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

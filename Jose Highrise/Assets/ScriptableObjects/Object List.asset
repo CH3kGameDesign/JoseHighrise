@@ -15,6 +15,33 @@ MonoBehaviour:
   blocks:
   - name: Base
     blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
     sprites:
     - {fileID: -181359924, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
     - {fileID: 869178473, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
@@ -46,44 +73,1219 @@ MonoBehaviour:
     - {fileID: -1403775726, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
     - {fileID: -1319508378, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
     - {fileID: -768741049, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-  - name: Takew
-    blockType: 0
-    sprites:
-    - {fileID: 21300000, guid: be340a165cb9c8d4cb50f1deeb51d4ea, type: 3}
-  - name: Pls
-    blockType: 0
-    sprites:
-    - {fileID: 1199535466, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-  - name: last
+  - name: Aqua Tile
     blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 1
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 2
     sprites:
-    - {fileID: -181359924, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 869178473, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1739170356, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -126389371, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 339990718, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -874673552, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1926464471, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -15110717, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1961272827, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 206771298, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -568216908, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1054401407, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1918680671, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -602921362, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -201624240, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1339531347, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -879945474, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -467638064, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -799335914, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -611003045, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1038465225, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -725485200, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1199535466, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 2127388533, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1104259720, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -191201841, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: 1112511240, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1403775726, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -1319508378, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
-    - {fileID: -768741049, guid: eaa4f182296f5dc4395591e8d7000bad, type: 3}
+    - {fileID: 679679002, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1661510451, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1480875899, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1653789001, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1793779193, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 632624388, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -601465396, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1673039795, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1932721801, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1682882209, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1267699090, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 2035638385, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1077635369, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 218141863, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1172186447, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 2094819192, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1802687672, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -608580105, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1611459784, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 588997928, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1633488524, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1615955143, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 1185461337, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 330964128, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -2077827405, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -43174324, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 884794238, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -149121214, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: 2129794129, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+    - {fileID: -1144999392, guid: 874c956f6edab0946ae3ef13a160e057, type: 3}
+  - name: Blue Tile
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 1
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 2
+    sprites:
+    - {fileID: 999212143, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 905968021, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -1245285647, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1032971413, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -2089888694, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -1519179374, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1278780072, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -991912715, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -1081833131, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1457976318, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 2049889543, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -1704633985, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -270184596, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -207281792, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1274869897, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -453186218, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1871153983, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 946978258, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 2795197, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 198336412, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 888799836, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1685531245, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1969263555, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -15154173, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1288711924, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 666510519, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: 1575480839, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -82299974, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -1161676974, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+    - {fileID: -748019316, guid: 1bdd352a3f8e11245888c086d6473424, type: 3}
+  - name: Green Tile
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 1
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 2
+    sprites:
+    - {fileID: 1145192824, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1193810529, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1182249122, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 71364026, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -662431670, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 575219660, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1344685966, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1653565582, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -584958307, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 2020295801, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1744741589, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1147481042, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 75230872, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1846914542, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1841328929, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -162095764, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 506096890, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -128726948, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1568379705, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -216736198, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -488796999, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 2064086667, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1985867528, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -2029043843, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -2113684958, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1044842570, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1113982525, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1864500699, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: 1154338741, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+    - {fileID: -1788772301, guid: 8211da2537af4ce4984b43d7e3be0545, type: 3}
+  - name: Orange Tile
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 1
+      purple: 0
+      red: 0
+    grabbability: 2
+    sprites:
+    - {fileID: -577248191, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1063897357, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1598491188, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1427103125, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1345766817, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1705729182, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1621272307, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1563661232, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 977484889, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1319610986, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1582669387, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1400704855, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 2125307094, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1600445941, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -120748591, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 764694604, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1249571412, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1546058706, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -858839788, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1360467133, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 2126686237, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 862603755, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1313352239, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 790833845, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1933208313, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: -1221051736, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 39345936, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1254565602, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 2068578945, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+    - {fileID: 1871868872, guid: f507f71e48ea83e4999a5254e9339198, type: 3}
+  - name: Purple Tile
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 1
+      red: 0
+    grabbability: 2
+    sprites:
+    - {fileID: 2004504580, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -569711079, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -920920161, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 2007311429, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1805319626, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1790230074, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1497517382, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1421179195, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1413279089, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -897299410, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1069715270, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -334381993, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -551839905, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -2104161024, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 44370007, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1403156271, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 2053678906, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1236674121, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 2004988008, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1167483007, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 315384878, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -349030037, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -1192392258, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 906889917, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 639616529, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -239478488, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: -188153651, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1310645604, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1097389905, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+    - {fileID: 1085333340, guid: a60c1d6e244c7d7478bcbc554210a63a, type: 3}
+  - name: Red Tile
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 1
+    grabbability: 2
+    sprites:
+    - {fileID: -482003810, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -436784543, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 776584200, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 117698064, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -881352392, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 337314460, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 952963550, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 459337487, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -2073967702, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -795398517, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 1584924013, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 1021630732, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -1046780842, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -814233115, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -1714802581, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 833080668, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 905323990, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 206227759, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 1568664896, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -405776950, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 1720245530, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 562469041, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 1910319769, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -140770646, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -820086375, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 399712488, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 58502635, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -466625765, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: -1386902318, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+    - {fileID: 2085340019, guid: 5c165c2d6bbabc24ea1d82e19a3a181e, type: 3}
+  - name: Door
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 1
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 753097118, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Start
+    blockType: 3
+    colliderType: 0
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 309298431, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Checkpoint
+    blockType: 3
+    colliderType: 1
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -894910314, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Bomb
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 1236210970, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Spike_Up
+    blockType: 0
+    colliderType: 5
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 1
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -1394021343, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Spike_Down
+    blockType: 0
+    colliderType: 4
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 1
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 1497587290, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Spike_Right
+    blockType: 0
+    colliderType: 2
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 1
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 319704844, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Spike_Left
+    blockType: 0
+    colliderType: 3
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 1
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 1113318799, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Star
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 1
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 1757989077, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Cannon_Right
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 2145758539240513633, guid: 2d501b6947c4c9a44adaf005d1bcf127, type: 3}
+      firerate: 1
+      dir: {x: 1, y: 0}
+      spawnOffset: {x: 0.3, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -941294929, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Cannon_Left
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 2145758539240513633, guid: 2d501b6947c4c9a44adaf005d1bcf127, type: 3}
+      firerate: 1
+      dir: {x: -1, y: 0}
+      spawnOffset: {x: -0.3, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -1577822602, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Cannon_Up
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 2145758539240513633, guid: 2d501b6947c4c9a44adaf005d1bcf127, type: 3}
+      firerate: 1
+      dir: {x: 0, y: 1}
+      spawnOffset: {x: 0, y: 0.3}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 718075645, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Cannon_Down
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 1
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 2145758539240513633, guid: 2d501b6947c4c9a44adaf005d1bcf127, type: 3}
+      firerate: 1
+      dir: {x: 0, y: -1}
+      spawnOffset: {x: 0, y: -0.3}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 619999011, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Door_Locked
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: Door
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 446710988, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Key
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 1
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 1
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -252118709, guid: 0f97d40765d951c4885328eab8a6a59d, type: 3}
+  - name: Aqua Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 1
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -1605631451, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -31570119, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1311641823, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -144045655, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1902566589, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 878403115, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -162367725, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1637347739, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1879492233, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -402056713, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -880720481, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1017168850, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1006970466, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 791977363, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -186505716, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1036595678, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1711434026, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 157530025, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1499662753, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -816709683, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1791219975, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1911189367, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -565426159, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -1197602533, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1513999584, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -800174846, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: -2007538751, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 1783194605, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 272283792, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+    - {fileID: 2071678195, guid: 3f3c137ec3b03f24b9463ec0581d1f36, type: 3}
+  - name: Blue Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 1
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -711279043, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 161895576, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 735494766, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 1625171716, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 1025064833, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 1387846432, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 1735315191, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1455695023, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1040021227, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -466932100, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 284070419, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -408013533, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 8809167, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -700002187, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1552359559, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1466603838, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -984853247, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 2113827363, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 362570576, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -133323903, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -408569969, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1884663231, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1452221219, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1182866124, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 1038747091, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1868607642, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -1196226299, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -2054510303, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: 780182752, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+    - {fileID: -871925294, guid: 0a10e6c98c74078478da1112f28f06da, type: 3}
+  - name: Green Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 1
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -1101179283, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -2036429981, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1450677699, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -24417256, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1853586804, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -743897877, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -1593506880, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -1783057916, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -735762709, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 2127351089, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1160488403, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 522078457, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1326924779, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 99733437, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 327524555, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -271427294, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -1003762918, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1115870369, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -386855509, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -778369303, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 33388786, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -2003101283, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 571923543, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 490842905, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -1299556971, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 562299141, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 753096612, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 955587772, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: 1302831987, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+    - {fileID: -2126671610, guid: 7a22b09f0de1c9f4b8c1ed060a9234e0, type: 3}
+  - name: Orange Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 1
+      purple: 0
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: 984522407, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 844123864, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 555355246, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1427839246, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1619712488, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 373884900, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1415074980, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -455062134, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1838427111, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1450729685, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 654797962, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 260972765, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -2009359697, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1303473005, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1124462266, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1698540987, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -862500914, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1983620212, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -237787262, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 2067070764, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -278206373, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1043027835, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1186724509, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1084075225, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1778572966, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1808290104, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1277173311, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1128513484, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: 1623133792, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+    - {fileID: -1832872686, guid: 8a6b408ed963c11429353dae0f374499, type: 3}
+  - name: Purple Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 1
+      red: 0
+    grabbability: 0
+    sprites:
+    - {fileID: -1528066766, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 819176439, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -83646693, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 529356609, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1685395306, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 255120904, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -800796963, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -631378802, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1845787459, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 81993351, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -457395608, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1716976766, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1575872496, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1554119052, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 527440811, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -1329548563, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -1393804246, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -1989515993, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -2091040305, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -1855775644, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 16551007, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1824594717, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1902768696, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -85332984, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -133600974, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -367357756, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -207826079, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: 1081089473, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -999442372, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+    - {fileID: -2130338193, guid: 34b33541964c2f34693199c71e82d0e2, type: 3}
+  - name: Red Locked
+    blockType: 1
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 1
+    grabbability: 0
+    sprites:
+    - {fileID: -1772277887, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -965251498, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -1133917076, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1360720993, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -1289052993, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 332010622, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1621199924, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 982623176, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -2046142071, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1521272356, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 89082420, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -1403209297, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -1877150396, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1548282673, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -366037278, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1043331897, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -53970771, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -189215342, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1696232853, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1184816282, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -483025148, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1365438032, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 720223600, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 792884808, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -2074908427, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1314799913, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 1368016721, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 889445373, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: -1664245859, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+    - {fileID: 845639934, guid: a2ade80f1c87f7447b4c54e1d0c3183d, type: 3}
+  - name: Grey Tile
+    blockType: 0
+    colliderType: 1
+    colliderTrigger: 0
+    canJumpOn: 0
+    deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
+    grabbability: 2
+    sprites:
+    - {fileID: 21300000, guid: df6e1de6adc458b408169873be58b2a1, type: 3}

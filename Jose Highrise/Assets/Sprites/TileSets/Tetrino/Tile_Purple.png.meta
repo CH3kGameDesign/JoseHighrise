@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: a60c1d6e244c7d7478bcbc554210a63a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile_Purple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816af0b50a3e8ce46b1021712b7bc935
+      internalID: 2004504580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98480527f5283f47b184f22b9d0d74a
+      internalID: -569711079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b016d84a30c1d594baa67edd4dc541c5
+      internalID: -920920161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358a9c31df4e9f34db8fe2166b64d048
+      internalID: 2007311429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151dc196c9d13f043b5b935ece84ce23
+      internalID: 1805319626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_5
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b14233d551dad44aaa938414520463f
+      internalID: -1790230074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed27e3bc6cdf8a4a9999664781124f0
+      internalID: -1497517382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42162b335204b044a8a34dd5e8ae797b
+      internalID: -1421179195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a815643c31817e4f9f578480cdec337
+      internalID: 1413279089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db8b10a230f126419da49264e621fbd
+      internalID: -897299410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_10
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62508c76c8dd0341b163b3871eefec5
+      internalID: -1069715270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_11
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9daaf17b3475a84181a3d468ca0c7ca
+      internalID: -334381993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5701f5dbce180f94e8a3613345fe45f4
+      internalID: -551839905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cf7fa9fc0fd79439c3066f3f10c491
+      internalID: -2104161024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4ccb8f7d3db1545928730b2b1253aa
+      internalID: 44370007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9c14c7212a17a44b39720a750c0c96
+      internalID: -1403156271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830064006d75bdf4492a345d08395b98
+      internalID: 2053678906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0438c248fdb61464c92ab0f6a02c2771
+      internalID: 1236674121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4522bb3f309e66b41b1e2f1facd71e8f
+      internalID: 2004988008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db61611ac56f8246a8ca3cbe8053eb0
+      internalID: -1167483007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e479b728f9c504689b15a9ac56049f
+      internalID: 315384878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_21
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a10b2a10878c41459d861ee7c8dd5a2
+      internalID: -349030037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a321a5462a03b8045a70e370f055ff17
+      internalID: -1192392258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6b67f9e03631c46bd8bc71e58b1a88
+      internalID: 906889917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab04238ce9fb7154a9e04cddf3252f99
+      internalID: 639616529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e586b13b85100d146b1db8588d5cb909
+      internalID: -239478488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cde15d61e428c44a1bf512f6b3009f
+      internalID: -188153651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10d9a2a5c5caf144ae7f5ad9112854a
+      internalID: 1310645604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cc16e8dae6b2f4e860073a2211293d
+      internalID: 1097389905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Purple_29
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35d7da42fd461f4e9d7d505ecfbd39e
+      internalID: 1085333340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 40047036956105b4688feaffbfbcf4eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tile_Purple_28: 1097389905
+      Tile_Purple_0: 2004504580
+      Tile_Purple_21: -349030037
+      Tile_Purple_3: 2007311429
+      Tile_Purple_18: 2004988008
+      Tile_Purple_6: -1497517382
+      Tile_Purple_1: -569711079
+      Tile_Purple_12: -551839905
+      Tile_Purple_9: -897299410
+      Tile_Purple_27: 1310645604
+      Tile_Purple_19: -1167483007
+      Tile_Purple_22: -1192392258
+      Tile_Purple_16: 2053678906
+      Tile_Purple_23: 906889917
+      Tile_Purple_10: -1069715270
+      Tile_Purple_29: 1085333340
+      Tile_Purple_8: 1413279089
+      Tile_Purple_2: -920920161
+      Tile_Purple_14: 44370007
+      Tile_Purple_4: 1805319626
+      Tile_Purple_5: -1790230074
+      Tile_Purple_20: 315384878
+      Tile_Purple_17: 1236674121
+      Tile_Purple_11: -334381993
+      Tile_Purple_15: -1403156271
+      Tile_Purple_25: -239478488
+      Tile_Purple_24: 639616529
+      Tile_Purple_13: -2104161024
+      Tile_Purple_26: -188153651
+      Tile_Purple_7: -1421179195
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

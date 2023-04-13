@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 76a54ec636dc97645b1d20ed1c198f5d
+guid: 241068d121d21dc4ba2712803a0d32ad
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -13,7 +13,7 @@ ScriptedImporter:
   svgPixelsPerUnit: 100
   gradientResolution: 64
   alignment: 0
-  customPivot: {x: 0.5, y: 0.5}
+  customPivot: {x: 0, y: 0}
   generatePhysicsShape: 0
   viewportOptions: 0
   preserveViewport: 0
@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: Jose TilesSprite
+      name: 
       originalName: 
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 601
-        height: 501
-      spriteID: b703b3fd5b9201a4a8f776caa2ea3c28
+        width: 0
+        height: 0
+      spriteID: afcdd867ef22d024688c613359d7e408
     PhysicsOutlines: []

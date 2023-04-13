@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: f507f71e48ea83e4999a5254e9339198
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile_Orange_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbb15e5dadfffa4e8b724aa4a5e7e7b
+      internalID: -577248191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ac9fbd670b32d4ba0062ccbf4190cd
+      internalID: -1063897357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa6f7e058ea4e846bd3d8f66ddbc2e0
+      internalID: 1598491188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750856e0783b7844a89b597cbe7bcf09
+      internalID: 1427103125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7242c8f812472c47bbda87267066715
+      internalID: 1345766817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_5
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c8634f4ee5347459c24d13bae4fbac
+      internalID: -1705729182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1532d47d51a33543ac0d499ff82b19c
+      internalID: 1621272307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5697a7e7be5f724a9dc8f8a1b2085dc
+      internalID: 1563661232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4842e62b8f0916f4c883295494909484
+      internalID: 977484889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb1832a927626a429b4b39827a60653
+      internalID: 1319610986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_10
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5019e4d8bce70474da94e30a8ae4b596
+      internalID: 1582669387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_11
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a8bb7da656662419c4a79572d2543b
+      internalID: -1400704855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc75d66c74ce5e43b93032fc3369973
+      internalID: 2125307094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c352a1fdd96a444c819f5fdfe3f6879
+      internalID: 1600445941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1f9b3e392b2714194e02e4049555db
+      internalID: -120748591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba162cfc04dbc4d409c65ef6bd095ba1
+      internalID: 764694604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b60c424625792c4c928f6ab6f37acf5
+      internalID: -1249571412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baac89c68b22eb4b91ae74bebbb1e8a
+      internalID: 1546058706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12647fd6422da144a851c7bad660764
+      internalID: -858839788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7447a18f20c290b45b0fc9a43f21a715
+      internalID: -1360467133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f43a8d1bbcf90042aba2888e07a62e1
+      internalID: 2126686237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_21
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81059b270cdb0f84997751e366d5eedd
+      internalID: 862603755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e1d512f4a97fd43a9f4571b507cba2
+      internalID: 1313352239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a7554ed02d96e4aa09c0b77c02a0c2
+      internalID: 790833845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fb1dd89f8e0a54a988b4390219526d
+      internalID: 1933208313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d5a4116f624484580381c13364ef29
+      internalID: -1221051736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c4b3e11aea4a4584ed38bdf953d5c
+      internalID: 39345936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4a6235657f049438e7c0669d821b6a
+      internalID: 1254565602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91248d76161a4aa45bb9eadcc6e46fd5
+      internalID: 2068578945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Orange_29
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4efa00a86938684bb3366ea67232622
+      internalID: 1871868872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0ca7e947c72303c4f999928e05c2fce6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tile_Orange_10: 1582669387
+      Tile_Orange_23: 790833845
+      Tile_Orange_25: -1221051736
+      Tile_Orange_0: -577248191
+      Tile_Orange_8: 977484889
+      Tile_Orange_2: 1598491188
+      Tile_Orange_12: 2125307094
+      Tile_Orange_16: -1249571412
+      Tile_Orange_6: 1621272307
+      Tile_Orange_1: -1063897357
+      Tile_Orange_17: 1546058706
+      Tile_Orange_20: 2126686237
+      Tile_Orange_27: 1254565602
+      Tile_Orange_24: 1933208313
+      Tile_Orange_22: 1313352239
+      Tile_Orange_5: -1705729182
+      Tile_Orange_7: 1563661232
+      Tile_Orange_14: -120748591
+      Tile_Orange_11: -1400704855
+      Tile_Orange_9: 1319610986
+      Tile_Orange_3: 1427103125
+      Tile_Orange_13: 1600445941
+      Tile_Orange_18: -858839788
+      Tile_Orange_19: -1360467133
+      Tile_Orange_21: 862603755
+      Tile_Orange_26: 39345936
+      Tile_Orange_29: 1871868872
+      Tile_Orange_28: 2068578945
+      Tile_Orange_4: 1345766817
+      Tile_Orange_15: 764694604
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

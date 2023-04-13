@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: 8a6b408ed963c11429353dae0f374499
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Locked_Orange_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac952080d8cd2f4d866d535f8b26f39
+      internalID: 984522407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8cba7e5ad82a64eb55e5b894ad6f96
+      internalID: 844123864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e0b8d205f98f742855e43e93aab466
+      internalID: 555355246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6218abbd1616df4aa04c3b87f07bbe8
+      internalID: -1427839246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a788383eca15874da3f1658f5a1da2d
+      internalID: -1619712488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_5
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 836
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e684793481462184b9c74233dadb7a48
+      internalID: 373884900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa3fd16c5000fb48a93767b89fe1389
+      internalID: -1415074980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0780d18b0018d844f938c0539aa192f6
+      internalID: -455062134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc742dcaab362a42898eb11fdf7a275
+      internalID: -1838427111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319793a4b5cc0bc49b80803f49879f95
+      internalID: 1450729685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_10
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e653550b4c38b984cb73d882414c4301
+      internalID: 654797962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_11
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 627
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494c2610db39bdc418ac8b1e941d5a63
+      internalID: 260972765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6545df21807f79d46b305de2765716dc
+      internalID: -2009359697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7326ac635ad81c34a85df1daf7361942
+      internalID: -1303473005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5494bde6b0a4eb94aa1f5d9fe4f2be67
+      internalID: -1124462266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7070e2f0ce628274eaad2a99a9c3eb11
+      internalID: 1698540987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2946ab401686b043aa3ae76a2b1fc64
+      internalID: -862500914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 418
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc0a60801e82b84ba04c2b32020712e
+      internalID: -1983620212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186ff48c172b8c346a40657106da2b4d
+      internalID: -237787262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db352e0b9a4a774c8609bebeab16019
+      internalID: 2067070764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f376b1920ea4f4e48809cc0c8efb4bc1
+      internalID: -278206373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_21
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a859bd0bbec7a04da1cc081c0559f34
+      internalID: -1043027835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484600367f59abc46a7ccbebea272b4a
+      internalID: -1186724509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 209
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7311c84d0076017438f1df10582e945f
+      internalID: 1084075225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534a6e26c1b27f940839dbdd39494320
+      internalID: 1778572966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c60ba446877274bbcbfab733050740
+      internalID: 1808290104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cc5871a1a2263409fdbbcbe042bdbc
+      internalID: -1277173311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52829c39830eee44bb878154299e6521
+      internalID: -1128513484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6483075c8bb20e4694f6b0c1930e980
+      internalID: 1623133792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locked_Orange_29
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208.83333
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404471aaec8e5af48b597d03092b546e
+      internalID: -1832872686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4845d38c42fab674a843b61e28bffd0a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Locked_Orange_1: 844123864
+      Locked_Orange_6: -1415074980
+      Locked_Orange_17: -1983620212
+      Locked_Orange_21: -1043027835
+      Locked_Orange_28: 1623133792
+      Locked_Orange_16: -862500914
+      Locked_Orange_24: 1778572966
+      Locked_Orange_2: 555355246
+      Locked_Orange_13: -1303473005
+      Locked_Orange_12: -2009359697
+      Locked_Orange_15: 1698540987
+      Locked_Orange_10: 654797962
+      Locked_Orange_22: -1186724509
+      Locked_Orange_25: 1808290104
+      Locked_Orange_27: -1128513484
+      Locked_Orange_26: -1277173311
+      Locked_Orange_4: -1619712488
+      Locked_Orange_14: -1124462266
+      Locked_Orange_9: 1450729685
+      Locked_Orange_0: 984522407
+      Locked_Orange_8: -1838427111
+      Locked_Orange_19: 2067070764
+      Locked_Orange_5: 373884900
+      Locked_Orange_7: -455062134
+      Locked_Orange_20: -278206373
+      Locked_Orange_11: 260972765
+      Locked_Orange_29: -1832872686
+      Locked_Orange_3: -1427839246
+      Locked_Orange_18: -237787262
+      Locked_Orange_23: 1084075225
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

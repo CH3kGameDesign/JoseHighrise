@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
 using System.Drawing;
 using Jose.Objects;
 using UnityEngine.InputSystem;
@@ -13,6 +12,9 @@ using System.Runtime.Serialization;
 using Jose.Maps;
 using System.Linq;
 using System.Text;
+using Microsoft.Win32.SafeHandles;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class LevelCreator : MonoBehaviour
 {
@@ -23,10 +25,13 @@ public class LevelCreator : MonoBehaviour
     [HideInInspector]
     public Map curMap = new Map();
     public AnimationCurve showHideAnim;
-
+    public AnimationCurve moveAnim;
+    public Sprite emptyCell;
     [System.Serializable]
     public class referenceClass
     {
+        public EventSystem eventSystem;
+        [Space(5)]
         public TMP_InputField nameText;
         [Space(5)]
         public TMP_InputField widthText;
@@ -48,6 +53,9 @@ public class LevelCreator : MonoBehaviour
         public GameObject overwritePopup;
         [Space(5)]
         public GameObject savePopup;
+        [Space(5)]
+        public Button fileNameHandle;
+        public Button sizeHandle;
     }
     public class popupVariableClass
     {
@@ -57,12 +65,15 @@ public class LevelCreator : MonoBehaviour
         public float timeSinceStart = 0;
         public float timer = 1;
         public AnimationCurve timeline = new AnimationCurve();
+        public Vector3 tarLocalDestination = Vector3.zero;
+        public Vector3 startLocalDestination = Vector3.zero;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (StaticData.currentMap != null)
+            curMap = StaticData.currentMap;
         references.nameText.text = curMap.levelName;
         references.widthText.text = curMap.width.ToString();
         references.heightText.text = curMap.height.ToString();
@@ -84,7 +95,8 @@ public class LevelCreator : MonoBehaviour
     {
         if (Mouse.current.leftButton.IsPressed())
         {
-            TileClick();
+            if (!references.eventSystem.IsPointerOverGameObject())
+                TileClick();
         }
     }
     void TileClick()
@@ -100,10 +112,59 @@ public class LevelCreator : MonoBehaviour
                 if (curMap.level[location.x, location.y] != objectChosen)
                 {
                     curMap.level[location.x, location.y] = objectChosen;
-                    UpdateMap();
+                    UpdateArea(location);
                 }
             }
         }
+    }
+
+    public void UpdateArea(Vector2Int pos)
+    {
+        for (int x = Mathf.Max(pos.x - 1, 0); x < Mathf.Min(pos.x + 2, curMap.width); x++)
+        {
+            for (int y = Mathf.Max(pos.y - 1, 0); y < Mathf.Min(pos.y + 2, curMap.height); y++)
+            {
+                Transform parent = transform.GetChild(0).GetChild(x).GetChild(y);
+                DeleteCell(parent);
+                RenderCell(new Vector2Int(x,y), parent);
+            }
+        }
+    }
+
+    public void DeleteCell(Transform parent)
+    {
+        if (parent.childCount > 0)
+            GameObject.Destroy(parent.GetChild(0).gameObject);
+    }
+
+    public void RenderCell(Vector2Int pos, Transform parent)
+    {
+        GameObject GOBlock = Instantiate(references.blockPrefab, parent);
+
+        int sprite = 4;
+        if (curMap.level[pos.x, pos.y] > 0)
+        {
+            switch (references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].blockType)
+            {
+                case ObjectList.blockTypeEnum.single:
+                    sprite = 0;
+                    break;
+                case ObjectList.blockTypeEnum.joined:
+                    sprite = TileManager.GetTileNum(pos, GetNeighbours(pos));
+                    break;
+                case ObjectList.blockTypeEnum.random:
+                    sprite = Random.Range(0, references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].sprites.Count);
+                    break;
+                case ObjectList.blockTypeEnum.hidden:
+                    sprite = 0;
+                    break;
+                default:
+                    break;
+            }
+            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].sprites[sprite];
+        }
+        else
+            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = emptyCell;
     }
 
     public void MoveArea (int dir)
@@ -270,13 +331,16 @@ public class LevelCreator : MonoBehaviour
                         case ObjectList.blockTypeEnum.random:
                             sprite = Random.Range(0, references.blockList.blocks[curMap.level[x, y]-1].sprites.Count);
                             break;
+                        case ObjectList.blockTypeEnum.hidden:
+                            sprite = 0;
+                            break;
                         default:
                             break;
                     }
                     GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = references.blockList.blocks[curMap.level[x, y] - 1].sprites[sprite];
                 }
                 else
-                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = references.blockList.blocks[0].sprites[sprite];
+                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = emptyCell;
 
             }
         }
@@ -369,12 +433,12 @@ public class LevelCreator : MonoBehaviour
         tardir = Application.persistentDataPath + "/Maps";
 #endif
         string[] files = Directory.GetFiles(tardir);
-        if (files.Contains<string>(tardir+filename + ".dat"))
+        if (files.Contains<string>(tardir+filename + ".dat.txt"))
         {
             int dupeCounter = 1;
             while (true)
             {
-                if (files.Contains<string>(tardir+filename + "_" + dupeCounter.ToString() + ".dat"))
+                if (files.Contains<string>(tardir+filename + "_" + dupeCounter.ToString() + ".dat.txt"))
                     dupeCounter++;
                 else
                 {
@@ -436,7 +500,7 @@ public class LevelCreator : MonoBehaviour
         
         // Creates a filestream to the desired file path
         FileStream fs = new FileStream(tardir
-            + "/"+filename+".dat", FileMode.Create);
+            + "/"+filename+".dat.txt", FileMode.Create);
         BinaryFormatter bf = new BinaryFormatter();
         try
         {
@@ -456,7 +520,7 @@ public class LevelCreator : MonoBehaviour
         temp.popupObjects = new GameObject[] { references.savePopup};
         temp.popupImages = new Image[] { references.savePopup.GetComponent<Image>()};
         temp.popupTexts = new TextMeshProUGUI[] { references.savePopup.transform.GetChild(0).GetComponent<TextMeshProUGUI>() };
-        temp.timer = 1;
+        temp.timer = 0.5f;
         temp.popupTexts[0].text = "Map saved as " + filename + " under " + tardir;
         StartCoroutine("showHidePopup", temp);
     }
@@ -472,11 +536,10 @@ public class LevelCreator : MonoBehaviour
         // Verifies the file path exists and creates one if not
         if (!Directory.Exists(tardir))
             Directory.CreateDirectory(tardir);
-
-        Debug.Log(tardir + "/"+filename);
-        if (File.Exists(tardir + "/"+filename+".dat"))
+        
+        if (File.Exists(tardir + "/"+filename+".dat.txt"))
         {
-            using (Stream stream = File.Open(tardir + "/"+filename + ".dat", FileMode.Open))
+            using (Stream stream = File.Open(tardir + "/"+filename + ".dat.txt", FileMode.Open))
             {
                 //Debug.Log(Application.persistentDataPath);
                 BinaryFormatter bformatter = new BinaryFormatter();
@@ -505,7 +568,7 @@ public class LevelCreator : MonoBehaviour
         List<string> fileNames = new List<string>();
         for (int i = 0; i < temp.Length; i++)
         {
-            if (temp[i].EndsWith(".dat"))
+            if (temp[i].EndsWith(".dat.txt"))
                 fileNames.Add(temp[i]);
         }
         for (int i = 0; i < fileNames.Count; i++)
@@ -513,7 +576,7 @@ public class LevelCreator : MonoBehaviour
             GameObject GO = Instantiate(references.fileItemPrefab, references.fileScrollContent);
             GO.transform.localPosition = new Vector3(341.5f,-70 -35 * i, 0);
             string[] fileName = fileNames[i].Split(new char[] { '/' ,'\\','.'});
-            string name = fileName[fileName.Length - 2];
+            string name = fileName[fileName.Length - 3];
             GO.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = name;
            
             GO.GetComponent<Button>().onClick.AddListener(delegate { ShowFileList(false); Load(name); });
@@ -556,4 +619,153 @@ public class LevelCreator : MonoBehaviour
         foreach (var item in popup.popupObjects)
             item.SetActive(false);
     }
+
+    IEnumerator movePopup(popupVariableClass popup)
+    {
+        while (popup.timeSinceStart < popup.timer)
+        {
+            popup.timeSinceStart += Time.deltaTime;
+
+            foreach (var item in popup.popupObjects)
+                item.GetComponent<RectTransform>().anchoredPosition = Vector3.Lerp(popup.startLocalDestination,popup.tarLocalDestination,popup.timeline.Evaluate(popup.timeSinceStart/popup.timer));
+
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+    }
+    public void ShowHideFileName()
+    {
+        popupVariableClass temp = new popupVariableClass();
+        temp.popupObjects = new GameObject[] { references.fileNameHandle.transform.parent.gameObject};
+        temp.startLocalDestination = temp.popupObjects[0].GetComponent<RectTransform>().anchoredPosition;
+        temp.timeline = moveAnim;
+        temp.timer = 0.1f;
+
+        if (references.fileNameHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Hide")
+        {
+            references.fileNameHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "File";
+            temp.tarLocalDestination = new Vector3(-100,temp.startLocalDestination.y,0);
+        }
+        else
+        {
+            references.fileNameHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hide";
+            temp.tarLocalDestination = new Vector3(50, temp.startLocalDestination.y, 0);
+        }
+        StartCoroutine("movePopup", temp);
+    }
+    public void ShowHideSize()
+    {
+        popupVariableClass temp = new popupVariableClass();
+        temp.popupObjects = new GameObject[] { references.sizeHandle.transform.parent.gameObject };
+        temp.startLocalDestination = temp.popupObjects[0].GetComponent<RectTransform>().anchoredPosition;
+        temp.timeline = moveAnim;
+        temp.timer = 0.1f;
+
+        if (references.sizeHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Hide")
+        {
+            references.sizeHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Size";
+            temp.tarLocalDestination = new Vector3(-100, temp.startLocalDestination.y, 0);
+        }
+        else
+        {
+            references.sizeHandle.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hide";
+            temp.tarLocalDestination = new Vector3(50, temp.startLocalDestination.y, 0);
+        }
+        StartCoroutine("movePopup", temp);
+    }
+
+
+    public void Play()
+    {
+        int blockID = TileManager.GetBlockID("Start",references.blockList);
+        Vector2Int spawnPos = TileManager.CheckForBlockPos(blockID,curMap);
+        if (spawnPos.x != -1)
+        {
+            StaticData.respawnPos = new Vector3(spawnPos.x, spawnPos.y, 0);
+            StaticData.currentMap = curMap;
+            StaticData.testingMode = true;
+            SceneManager.LoadScene(1);
+        }
+        else
+        {
+            popupVariableClass temp = new popupVariableClass();
+            temp.timeline = showHideAnim;
+            temp.popupObjects = new GameObject[] { references.savePopup };
+            temp.popupImages = new Image[] { references.savePopup.GetComponent<Image>() };
+            temp.popupTexts = new TextMeshProUGUI[] { references.savePopup.transform.GetChild(0).GetComponent<TextMeshProUGUI>() };
+            temp.timer = 0.5f;
+            temp.popupTexts[0].text = "Missing A Start Block";
+            StartCoroutine("showHidePopup", temp);
+        }
+    }
+
+    #region Camera Controls
+    public void moveCamera(int temp)
+    {
+        Vector3 pos = Camera.main.transform.position;
+        switch (temp)
+        {
+            case 0:
+                pos += Vector3.left;
+                break;
+            case 1:
+                pos += Vector3.right;
+                break;
+            case 2:
+                pos += Vector3.up;
+                break;
+            case 3:
+                pos += Vector3.down;
+                break;
+            default:
+                break;
+        }
+        pos = new Vector3(Mathf.Clamp(pos.x, -1, curMap.width), Mathf.Clamp(pos.y ,- 1, curMap.height), pos.z);
+        Camera.main.transform.position = pos;
+
+    }
+    public void zoomCamera(float zoom)
+    {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize + zoom, 1, 10);
+    }
+
+    public void zoomCameraIn(InputAction.CallbackContext cnt)
+    {
+        if (cnt.performed)
+            zoomCamera(-1);
+    }
+    public void zoomCameraOut(InputAction.CallbackContext cnt)
+    {
+        if (cnt.performed)
+            zoomCamera(1);
+    }
+
+    public void OnHorizontal(InputAction.CallbackContext cnt)
+    {
+        if (cnt.performed)
+        {
+            int temp = 0;
+            if (cnt.ReadValue<float>() > 0)
+                temp = 1;
+            moveCamera(temp);
+        }
+    }
+    public void OnVertical(InputAction.CallbackContext cnt)
+    {
+        if (cnt.performed)
+        {
+            int temp = 3;
+            if (cnt.ReadValue<float>() > 0)
+                temp = 2;
+            moveCamera(temp);
+        }
+    }
+    #endregion
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
+
+    }
+
+   
 }

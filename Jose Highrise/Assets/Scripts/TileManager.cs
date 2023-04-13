@@ -1,45 +1,90 @@
+using Jose.Maps;
 using Jose.Objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
 
 public class TileManager : MonoBehaviour
 {
-    public int[,] tiles = new int[0,0];
-    [HideInInspector]
-    public Vector2Int size;
+    public Map curMap;
 
     public GameObject blockPrefab;
     public ObjectList blockList;
+
+    public GameObject testingButton;
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
-        int [,] temp = new int[5, 5];
-        temp[1, 1] = 1;
-        temp[1, 0] = 1;
-        temp[1, 3] = 1;
-        temp[1, 4] = 1;
-        temp[2, 1] = 1;
-        temp[3, 1] = 1;
-        temp[2, 3] = 1;
-        temp[2, 4] = 1;
-        temp[0, 1] = 1;
-        temp[0, 2] = 1;
-        temp[0, 3] = 1;
-        temp[0, 4] = 1;
-        temp[4, 1] = 1;
-        temp[4, 2] = 1;
-        temp[4, 3] = 1;
-        temp[4, 4] = 1;
-        UpdateMap(temp, new Vector2Int(5, 5));
+        if (StaticData.currentMap != null)
+        {
+            curMap = CopyMap(StaticData.currentMap);
+            int blockID = GetBlockID("Start", blockList);
+            Vector2Int tempPos = CheckForBlockPos(blockID, curMap);
+            StaticData.respawnPos = new Vector3(tempPos.x, tempPos.y, 0);
+            player.position = new Vector3(tempPos.x, tempPos.y, 0);
+            Movement temp = player.GetComponentInParent<Movement>();
+            temp.References.T_cam.position = temp.References.RB.position + temp.CameraValues.offset;
+        }
+
+        testingButton.SetActive(StaticData.testingMode);
+
+        UpdateMap();
     }
 
-    public void UpdateMap(int[,] temp, Vector2Int sizeTemp)
+    public static int GetBlockID(string name, ObjectList list)
     {
-        tiles = temp;
-        size = sizeTemp;
+        for (int i = 0; i < list.blocks.Count; i++)
+        {
+            if (list.blocks[i].name == name)
+                return i;
+        }
+        return -1;
+    }
+
+    public static Vector2Int CheckForBlockPos(int blockNo, Map map)
+    {
+        for (int x = 0; x < map.width; x++)
+        {
+            for (int y = 0; y < map.height; y++)
+            {
+                if (map.level[x, y] == blockNo + 1)
+                    return new Vector2Int(x, y);
+            }
+        }
+        return new Vector2Int(-1, -1);
+    }
+
+    private Map CopyMap(Map map)
+    {
+        Map newMap = new Map();
+        newMap.height = map.height;
+        newMap.width = map.width;
+        newMap.level = new int[map.width, map.height];
+        for (int x = 0; x < map.width; x++)
+        {
+            for (int y = 0; y < map.height; y++)
+            {
+                newMap.level[x,y] = map.level[x,y];
+            }
+        }
+        newMap.levelName = map.levelName;
+        return newMap;
+    }
+
+    public void UpdateMap(Map newMap)
+    {
+        curMap = newMap;
+        StaticData.currentMap = CopyMap(newMap);
+        DeleteMap();
+        RenderMap();
+    }
+
+    public void UpdateMap()
+    {
         DeleteMap();
         RenderMap();
     }
@@ -54,24 +99,25 @@ public class TileManager : MonoBehaviour
         GameObject GO = new GameObject();
         GO.transform.parent = transform;
         GO.name = "TileMap";
-        for (int x = 0; x < size.x; x++)
+        for (int x = 0; x < curMap.width; x++)
         {
             GameObject GO1 = new GameObject();
             GO1.transform.parent = GO.transform;
             GO1.name = "Column " + x;
             GO1.transform.localPosition = new Vector3(x, 0, 0);
-            for (int y = 0; y < size.y; y++)
+            for (int y = 0; y < curMap.height; y++)
             {
                 GameObject GO2 = new GameObject();
                 GO2.transform.parent = GO1.transform;
                 GO2.name = "Cell ["+x+","+y+"]";
                 GO2.transform.localPosition = new Vector3(0, y, 0);
-                if (tiles[x,y] > 0)
+                if (curMap.level[x,y] > 0)
                 {
                     GameObject GOBlock = Instantiate(blockPrefab, GO2.transform);
                     Vector2Int pos = new Vector2Int(x, y);
                     int sprite = 0;
-                    switch (blockList.blocks[tiles[x, y] - 1].blockType)
+                    ObjectList.spriteClass temp = blockList.blocks[curMap.level[x, y] - 1];
+                    switch (temp.blockType)
                     {
                         case ObjectList.blockTypeEnum.single:
                             sprite = 0;
@@ -80,46 +126,84 @@ public class TileManager : MonoBehaviour
                             sprite = GetTileNum(pos, GetNeighbours(pos));
                             break;
                         case ObjectList.blockTypeEnum.random:
-                            sprite = Random.Range(0, blockList.blocks[tiles[x, y] - 1].sprites.Count);
+                            sprite = Random.Range(0, temp.sprites.Count);
+                            break;
+                        case ObjectList.blockTypeEnum.hidden:
+                            sprite = 0;
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                             break;
                         default:
                             break;
                     }
-                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blockList.blocks[tiles[x, y] - 1].sprites[sprite];
+                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp.sprites[sprite];
+                    GOBlock.GetComponent<Block>().UpdateBlockInfo(new Vector2Int(x, y), temp);
+                    SetCollider(GOBlock.GetComponent<BoxCollider>(), temp);
                 }
             }
         }
     }
+    void SetCollider (BoxCollider col, ObjectList.spriteClass block)
+    {
+        switch (block.colliderType)
+        {
+            case ObjectList.colliderTypeEnum.none:
+                col.enabled = false;
+                break;
+            case ObjectList.colliderTypeEnum.fullBlock:
+                break;
+            case ObjectList.colliderTypeEnum.leftHalf:
+                col.center = new Vector3(-0.25f, 0, 0);
+                col.size = new Vector3(0.5f, 1, 1);
+                break;
+            case ObjectList.colliderTypeEnum.rightHalf:
+                col.center = new Vector3(0.25f, 0, 0);
+                col.size = new Vector3(0.5f, 1, 1);
+                break;
+            case ObjectList.colliderTypeEnum.upHalf:
+                col.center = new Vector3(0,0.25f, 0);
+                col.size = new Vector3(1, 0.5f, 1);
+                break;
+            case ObjectList.colliderTypeEnum.downHalf:
+                col.center = new Vector3(0,-0.25f, 0);
+                col.size = new Vector3(1, 0.5f, 1);
+                break;
+            default:
+                break;
+        }
+        col.isTrigger = block.colliderTrigger;
+
+    }
+
     int[] GetNeighbours(Vector2Int coord)
     {
         int[] neighbour = new int[8];
-        int key = tiles[coord.x, coord.y];
+        int key = curMap.level[coord.x, coord.y];
 
         if (coord.x == 0)
         { neighbour[0] = -1; neighbour[3] = -1; neighbour[5] = -1; }
         if (coord.y == 0)
         { neighbour[5] = -1; neighbour[6] = -1; neighbour[7] = -1; }
-        if (coord.x >= size.x - 1)
+        if (coord.x >= curMap.width - 1)
         { neighbour[2] = -1; neighbour[4] = -1; neighbour[7] = -1; }
-        if (coord.y >= size.y - 1)
+        if (coord.y >= curMap.height - 1)
         { neighbour[0] = -1; neighbour[1] = -1; neighbour[2] = -1; }
 
         if (neighbour[0] != -1)
-            if (tiles[coord.x - 1, coord.y + 1] == key) neighbour[0] = 1;
+            if (curMap.level[coord.x - 1, coord.y + 1] == key) neighbour[0] = 1;
         if (neighbour[1] != -1)
-            if (tiles[coord.x, coord.y + 1] == key) neighbour[1] = 1;
+            if (curMap.level[coord.x, coord.y + 1] == key) neighbour[1] = 1;
         if (neighbour[2] != -1)
-            if (tiles[coord.x + 1, coord.y + 1] == key) neighbour[2] = 1;
+            if (curMap.level[coord.x + 1, coord.y + 1] == key) neighbour[2] = 1;
         if (neighbour[3] != -1)
-            if (tiles[coord.x - 1, coord.y] == key) neighbour[3] = 1;
+            if (curMap.level[coord.x - 1, coord.y] == key) neighbour[3] = 1;
         if (neighbour[4] != -1)
-            if (tiles[coord.x + 1, coord.y] == key) neighbour[4] = 1;
+            if (curMap.level[coord.x + 1, coord.y] == key) neighbour[4] = 1;
         if (neighbour[5] != -1)
-            if (tiles[coord.x - 1, coord.y - 1] == key) neighbour[5] = 1;
+            if (curMap.level[coord.x - 1, coord.y - 1] == key) neighbour[5] = 1;
         if (neighbour[6] != -1)
-            if (tiles[coord.x, coord.y - 1] == key) neighbour[6] = 1;
+            if (curMap.level[coord.x, coord.y - 1] == key) neighbour[6] = 1;
         if (neighbour[7] != -1)
-            if (tiles[coord.x + 1, coord.y - 1] == key) neighbour[7] = 1;
+            if (curMap.level[coord.x + 1, coord.y - 1] == key) neighbour[7] = 1;
 
         return neighbour;
     }
@@ -133,9 +217,9 @@ public class TileManager : MonoBehaviour
 
         if (neighbour[1] == 1)
         {
-            if (neighbour[4] == 1)
+            if (neighbour[3] == 1)
             {
-                if(neighbour[3] == 1)
+                if(neighbour[4] == 1)
                 {
                     if (neighbour[6] == 1)
                     {
@@ -160,7 +244,7 @@ public class TileManager : MonoBehaviour
             }
             else
             {
-                if (neighbour[3] == 1)
+                if (neighbour[4] == 1)
                 {
                     if (neighbour[6] == 1)
                     {
@@ -186,9 +270,9 @@ public class TileManager : MonoBehaviour
         }
         else
         {
-            if (neighbour[4] == 1)
+            if (neighbour[3] == 1)
             {
-                if (neighbour[3] == 1)
+                if (neighbour[4] == 1)
                 {
                     if (neighbour[6] == 1)
                     {
@@ -213,7 +297,7 @@ public class TileManager : MonoBehaviour
             }
             else
             {
-                if (neighbour[3] == 1)
+                if (neighbour[4] == 1)
                 {
                     if (neighbour[6] == 1)
                     {
@@ -239,5 +323,112 @@ public class TileManager : MonoBehaviour
         }
 
         return temp;
+    }
+
+    public void ExitTestingMode()
+    {
+        StaticData.testingMode = false;
+        SceneManager.LoadScene(2);
+    }
+
+    public void UpdateSprites(Vector2Int tarPos)
+    {
+        for (int x = Mathf.Max(tarPos.x - 1,0); x < Mathf.Min(tarPos.x +2,curMap.width); x++)
+        {
+            for (int y = Mathf.Max(tarPos.y - 1, 0); y < Mathf.Min(tarPos.y + 2, curMap.height); y++)
+            {
+                if (curMap.level[x, y] > 0)
+                {
+                    GameObject GOBlock = transform.GetChild(0).GetChild(x).GetChild(y).GetChild(0).gameObject;
+                    Vector2Int pos = new Vector2Int(x, y);
+                    int sprite = 0;
+                    ObjectList.spriteClass temp = blockList.blocks[curMap.level[x, y] - 1];
+                    switch (temp.blockType)
+                    {
+                        case ObjectList.blockTypeEnum.single:
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp.sprites[sprite];
+                            break;
+                        case ObjectList.blockTypeEnum.joined:
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                            sprite = GetTileNum(pos, GetNeighbours(pos));
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp.sprites[sprite];
+                            break;
+                        case ObjectList.blockTypeEnum.random:
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                            if (pos == tarPos)
+                                sprite = Random.Range(0, temp.sprites.Count);
+                            break;
+                        case ObjectList.blockTypeEnum.hidden:
+                            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    public Block GetBlock(Vector2Int pos)
+    {
+        if (pos.x >= 0 && pos.x < curMap.width && pos.y >= 0 && pos.y < curMap.height)
+        {
+            if (curMap.level[pos.x, pos.y] > 0)
+            {
+                return transform.GetChild(0).GetChild(pos.x).GetChild(pos.y).GetChild(0).GetComponent<Block>();
+            }
+        }
+        return null;
+    }
+
+    public IEnumerator MoveToLocal(MoveClass move)
+    {
+        while (move.timeSinceStart < move.timer)
+        {
+            move.timeSinceStart += Time.deltaTime;
+            if (move.tar != null)
+                move.tar.localPosition = Vector3.Lerp(move.startPos, move.tarPos, move.timeSinceStart / move.timer);
+            else
+                break;
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+        if (move.tar != null)
+            move.tar.localPosition = move.tarPos;
+    }
+
+    public void UnlockAllBlocks()
+    {
+        for (int x = 0; x < curMap.width; x++)
+        {
+            for (int y = 0; y < curMap.height; y++)
+            {
+                if (curMap.level[x, y] > 0)
+                {
+                    string temp = blockList.blocks[curMap.level[x, y] - 1].switchToBlockOnUnlock;
+                    if (temp.Length > 0)
+                    {
+                        int blockID = GetBlockID(temp, blockList);
+                        curMap.level[x, y] = blockID + 1;
+                        GameObject.Destroy(transform.GetChild(0).GetChild(x).GetChild(y).GetChild(0).gameObject);
+                        GameObject GOBlock = Instantiate(blockPrefab, transform.GetChild(0).GetChild(x).GetChild(y));
+                        GOBlock.transform.SetSiblingIndex(0);
+                        GOBlock.GetComponent<Block>().UpdateBlockInfo(new Vector2Int(x, y), blockList.blocks[blockID]);
+                        SetCollider(GOBlock.GetComponent<BoxCollider>(), blockList.blocks[blockID]);
+
+                        UpdateSprites(new Vector2Int(x, y));
+                    }
+                }
+            }
+        }
+    }
+
+    public class MoveClass
+    {
+        public Transform tar;
+        public Vector3 tarPos = Vector3.zero;
+        public Vector3 startPos = Vector3.zero;
+        public float timer = 0.2f;
+        public float timeSinceStart = 0;
     }
 }

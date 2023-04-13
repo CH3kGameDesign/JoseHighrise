@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 0f97d40765d951c4885328eab8a6a59d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Interactables_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a63fee14aeef341b4f678433d9ae8d
+      internalID: 753097118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d6bd767a8f12140a3d3c5adc3749e1
+      internalID: 309298431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a124ded2494ef448799b8e03d8ceb5
+      internalID: -894910314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faf4ef9db0751b49a6747a1b68b86e0
+      internalID: 1236210970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815f57505fb35104896bb37f96c00d78
+      internalID: -378170540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_5
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 834.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3c411939252fc49b3af874b8bcdd16
+      internalID: -1507094473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0ad9d912c2cb44b8c02423960021a5
+      internalID: -1394021343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8330117c6f4fdd84cbe248ba8ba00e0c
+      internalID: 1497587290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1072b49f6c9e2554288f17fd5e952b47
+      internalID: 319704844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167a364851d21da4fbded709474db69c
+      internalID: 1113318799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_10
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149784bd9baced74eabcb15999ad0b87
+      internalID: -1257876133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_11
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 626.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4b1ee3969138c4196b18d63a2d9341
+      internalID: 551993383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91e9ff815aa987489d496d8281f071f
+      internalID: 1757989077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56c824bb0473984b8df234555ecdf25
+      internalID: -941294929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0625064086ee9b849bb9531cbe47b366
+      internalID: -1577822602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044166facba168e42aa196a1b6d5663f
+      internalID: 718075645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_16
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6204e6b37a0cd4d84ae85e671cbf98
+      internalID: 619999011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 418.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434d702f10948bc4b861795d3b915e85
+      internalID: 281863121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3b84e81f4b5ef4e9ac6b33b207284f
+      internalID: 1079769793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 210.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f7312bdbb4484448edb75449a0a723
+      internalID: -252118709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 210.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f19599dd69db1c4aabc511557d5d0fc
+      internalID: 446710988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_21
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 210.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edad75e2328b70d4fb87f71915459514
+      internalID: -679673641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 210.4
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df7f6d5b15e6c24abb8d82db08f88e5
+      internalID: 506991495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.399994
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c3c37701f7cef498ea287b5a188c2d
+      internalID: 911780946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_24
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2.399994
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05843301b2122824a92a49c0b251cfb8
+      internalID: -2028262325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_25
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2.399994
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3aec8c66779a64d8b9a3746bb33517
+      internalID: -1921206325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_26
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 2.399994
+        width: 208.5
+        height: 208.6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9acdbbf8d6ca5d49a374a26f998cf3f
+      internalID: 1489126571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 459aca3ba3113ca4c85828b846030074
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Interactables_14: -1577822602
+      Interactables_13: -941294929
+      Interactables_21: -679673641
+      Interactables_5: -1507094473
+      Interactables_24: -2028262325
+      Interactables_22: 506991495
+      Interactables_6: -1394021343
+      Interactables_3: 1236210970
+      Interactables_7: 1497587290
+      Interactables_16: 619999011
+      Interactables_17: 281863121
+      Interactables_12: 1757989077
+      Interactables_18: 1079769793
+      Interactables_0: 753097118
+      Interactables_15: 718075645
+      Interactables_1: 309298431
+      Interactables_19: -252118709
+      Interactables_25: -1921206325
+      Interactables_11: 551993383
+      Interactables_2: -894910314
+      Interactables_20: 446710988
+      Interactables_9: 1113318799
+      Interactables_4: -378170540
+      Interactables_8: 319704844
+      Interactables_10: -1257876133
+      Interactables_26: 1489126571
+      Interactables_23: 911780946
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
