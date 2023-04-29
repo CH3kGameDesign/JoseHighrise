@@ -67,8 +67,31 @@ MonoBehaviour:
     colliderTrigger: 0
     canJumpOn: 0
     deadly: 0
+    finishOnTouch: 0
+    unlockOnTouch: 0
+    gainPointsOnTouch: 0
+    shootInfo:
+      bullet: {fileID: 0}
+      firerate: 1
+      dir: {x: 0, y: 0}
+      spawnOffset: {x: 0, y: 0}
+      destroyAfter: 10
+    moveInfo:
+      moveSpeed: 3
+      dir: {x: 0, y: 0}
+      moveType: 0
+      faceDir: 0
+    switchToBlockOnUnlock: 
+    breaksWhenSwappedWith:
+      aqua: 0
+      blue: 0
+      green: 0
+      orange: 0
+      purple: 0
+      red: 0
     grabbability: 0
     sprites: []
+  shootTimer: 0
 --- !u!1 &4043168112089654905
 GameObject:
   m_ObjectHideFlags: 0

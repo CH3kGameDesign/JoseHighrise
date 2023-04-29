@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     [Header("---- Sandbox ----")]
     public moveValueClass MoveValues;
     [Space(5)]
+    public swapValueClass SwapValues;
+    [Space(5)]
     public cameraValueClass CameraValues;
 
     [HideInInspector]
@@ -62,6 +64,27 @@ public class Movement : MonoBehaviour
         public int scene;
     }
 
+    public class blockBreakClass
+    {
+        public Transform tar;
+        public float timer = 0;
+        public float delay = 0.3f;
+        public float speed = 0.1f;
+        public AnimationCurve scaleCurve = new AnimationCurve();
+        public Vector3 startScale = Vector3.one;
+        public float tarMultScale = 1.2f;
+    }
+
+    public class blockColorClass
+    {
+        public List<Block> blocks = new List<Block>();
+        public float speed = 0.2f;
+        public float delay = 0.2f;
+        public float timer = 0;
+        public Color color;
+        public AnimationCurve colorCurve;
+    }
+
     [System.Serializable]
     public class inputClass
     {
@@ -82,6 +105,15 @@ public class Movement : MonoBehaviour
         public float F_jumpDuration;
         public AnimationCurve F_jumpCurve;
         public float F_coyoteTime;
+    }
+    [System.Serializable]
+    public class swapValueClass
+    {
+        public float initialSwapBreakDelay = 0.4f;
+        public float subsequentSwapBreakDelay = 0.2f;
+        public float swapSpeed = 0.1f;
+        public AnimationCurve breakScaleCurve;
+        public Color breakColor = Color.grey;
     }
 
     [System.Serializable]
@@ -213,7 +245,7 @@ public class Movement : MonoBehaviour
                             tempMove.tarPos = Vector3.zero;
                             tempMove.startPos = tarDir;
                             tempMove.tar = block.GetChild(0);
-                            tempMove.timer = 0.05f;
+                            tempMove.timer = SwapValues.swapSpeed;
                             References.TM.StartCoroutine("MoveToLocal", tempMove);
 
                             if (block2.childCount > 0)
@@ -222,7 +254,7 @@ public class Movement : MonoBehaviour
                                 tempMove2.tar = block2.GetChild(0);
                                 tempMove2.startPos = -tarDir;
                                 tempMove2.tarPos = Vector3.zero;
-                                tempMove2.timer = 0.05f;
+                                tempMove2.timer = SwapValues.swapSpeed;
 
                                 block2.GetChild(0).GetComponent<Block>().gridPos = gridPos + gridDir;
                                 block2.GetChild(0).parent = block.parent;
@@ -232,7 +264,7 @@ public class Movement : MonoBehaviour
                             TileManager.MoveClass tempMove3 = new TileManager.MoveClass();
                             tempMove3.startPos = -tarDir;
                             tempMove3.tarPos = Vector3.zero;
-                            tempMove3.timer = 0.05f;
+                            tempMove3.timer = SwapValues.swapSpeed;
                             tempMove3.tar = References.RB.transform.GetChild(0);
                             References.TM.StartCoroutine("MoveToLocal", tempMove3);
 
@@ -265,6 +297,8 @@ public class Movement : MonoBehaviour
     {
         List<Block> blocks = new List<Block>();
         blocks.Add(temp);
+        List<int> delay = new List<int>();
+        delay.Add(0);
         bool[] check = getBreakBools(temp);
         for (int i = 0; i < blocks.Count; i++)
         {
@@ -279,7 +313,10 @@ public class Movement : MonoBehaviour
                         for (int j = 0; j < 6; j++)
                         {
                             if (check2[j] && check[j])
+                            {
                                 blocks.Add(temp2);
+                                delay.Add(delay[i] + 1);
+                            }
                         }
                     }
                 }
@@ -295,7 +332,10 @@ public class Movement : MonoBehaviour
                         for (int j = 0; j < 6; j++)
                         {
                             if (check2[j] && check[j])
+                            {
                                 blocks.Add(temp2);
+                                delay.Add(delay[i] + 1);
+                            }
                         }
                     }
                 }
@@ -306,8 +346,18 @@ public class Movement : MonoBehaviour
             for (int i = 0; i < blocks.Count; i++)
             {
                 References.TM.curMap.level[blocks[i].gridPos.x, blocks[i].gridPos.y] = 0;
-                GameObject.Destroy(blocks[i].gameObject,0.4f);
+                blockBreakClass bbc = new blockBreakClass();
+                bbc.tar = blocks[i].transform;
+                bbc.scaleCurve = SwapValues.breakScaleCurve;
+                bbc.startScale = blocks[i].transform.GetChild(0).localScale;
+                bbc.delay = SwapValues.initialSwapBreakDelay + delay[i] * SwapValues.subsequentSwapBreakDelay;
+                StartCoroutine("BlockBreak", bbc);
             }
+            blockColorClass bcc = new blockColorClass();
+            bcc.blocks = blocks;
+            bcc.color = SwapValues.breakColor;
+            bcc.colorCurve = SwapValues.breakScaleCurve;
+            StartCoroutine("BlockColor", bcc);
         }
     }
 
@@ -453,6 +503,51 @@ public class Movement : MonoBehaviour
                 if (!staticValues.B_dead)
                     Death();
             }
+        }
+    }
+
+    public IEnumerator BlockBreak(blockBreakClass bbc)
+    {
+        while (bbc.timer < bbc.delay)
+        {
+            bbc.timer += 0.02f;
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+        bbc.timer = 0;
+        while (bbc.timer < bbc.speed)
+        {
+            bbc.timer += 0.02f;
+            if (bbc.tar != null)
+                bbc.tar.GetChild(0).localScale = Vector3.Lerp(bbc.startScale, bbc.startScale * bbc.tarMultScale, bbc.scaleCurve.Evaluate(bbc.timer / bbc.speed));
+            else
+                break;
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+        if (bbc.tar != null)
+            GameObject.Destroy(bbc.tar.gameObject);
+    }
+
+    public IEnumerator BlockColor(blockColorClass bcc)
+    {
+        while (bcc.timer < bcc.delay)
+        {
+            bcc.timer += 0.02f;
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+        bcc.timer = 0;
+        while (bcc.timer < bcc.speed)
+        {
+            bcc.timer += 0.02f;
+            Color temp = Color.Lerp(Color.white, bcc.color, bcc.colorCurve.Evaluate(bcc.timer / bcc.speed));
+            foreach (var item in bcc.blocks)
+            {
+                item.transform.GetChild(0).GetComponent<SpriteRenderer>().color = temp;
+            }
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
+        foreach (var item in bcc.blocks)
+        {
+            item.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 

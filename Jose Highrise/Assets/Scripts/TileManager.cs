@@ -386,7 +386,7 @@ public class TileManager : MonoBehaviour
     {
         while (move.timeSinceStart < move.timer)
         {
-            move.timeSinceStart += Time.deltaTime;
+            move.timeSinceStart += 0.02f;
             if (move.tar != null)
                 move.tar.localPosition = Vector3.Lerp(move.startPos, move.tarPos, move.timeSinceStart / move.timer);
             else
