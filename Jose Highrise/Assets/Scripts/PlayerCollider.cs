@@ -25,4 +25,8 @@ public class PlayerCollider : MonoBehaviour
     {
         M_player.CollisionStay(collision);
     }
+    private void OnTriggerExit(Collider other)
+    {
+        M_player.TriggerExit(other);
+    }
 }

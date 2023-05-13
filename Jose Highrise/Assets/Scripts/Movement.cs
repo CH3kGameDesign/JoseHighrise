@@ -46,6 +46,7 @@ public class Movement : MonoBehaviour
         public Transform T_cam;
         public Rigidbody RB;
         public TileManager TM;
+        public Transform startPositionObject;
     }
     [System.Serializable]
     public class blackoutClass
@@ -134,12 +135,17 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("DelayedStart", 0.025f);
         blackoutClass temp = CopyBlackout(blackout,true);
         staticValues.B_dead = false;
         staticValues.B_finish = false;
         staticValues.I_score = 0;
         StopCoroutine("openCloseBlackout");
         StartCoroutine("openCloseBlackout", temp);
+    }
+    void DelayedStart()
+    {
+        References.startPositionObject.position = References.RB.position;
     }
 
     // Update is called once per frame
@@ -406,6 +412,7 @@ public class Movement : MonoBehaviour
 
     public void FinishLevel()
     {
+        GhostTimer.Finish();
         staticValues.B_finish = true;
         StaticData.levelNum++;
         blackoutClass temp = CopyBlackout(blackout, false);
@@ -493,7 +500,15 @@ public class Movement : MonoBehaviour
             }
         }
     }
-    
+
+    public void TriggerExit(Collider other)
+    {
+        if (other.tag == "Start")
+        {
+            GhostTimer.StartTimer();
+        }
+    }
+
     public void CollisionStay(Collision collision)
     {
         if (collision.collider.tag == "Block")
