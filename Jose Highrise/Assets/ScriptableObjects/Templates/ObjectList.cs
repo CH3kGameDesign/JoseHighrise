@@ -31,6 +31,8 @@ namespace Jose.Objects
             public List<Sprite> sprites = new List<Sprite>();
         }
         public List<spriteClass> blocks = new List<spriteClass>();
+        [Space(10)]
+        public List<spriteClass> bgTiles = new List<spriteClass>();
 
         [System.Serializable]
         public class shootInfoClass

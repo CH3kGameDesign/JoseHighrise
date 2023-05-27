@@ -64,11 +64,13 @@ public class TileManager : MonoBehaviour
         newMap.height = map.height;
         newMap.width = map.width;
         newMap.level = new int[map.width, map.height];
+        newMap.bg = new int[map.width, map.height];
         for (int x = 0; x < map.width; x++)
         {
             for (int y = 0; y < map.height; y++)
             {
                 newMap.level[x,y] = map.level[x,y];
+                newMap.bg[x, y] = map.bg[x, y];
             }
         }
         newMap.levelName = map.levelName;
@@ -123,7 +125,10 @@ public class TileManager : MonoBehaviour
                             sprite = 0;
                             break;
                         case ObjectList.blockTypeEnum.joined:
-                            sprite = GetTileNum(pos, GetNeighbours(pos));
+                            if (temp.sprites.Count > 30)
+                                sprite = GetTileNum_New(pos, GetNeighbours(pos));
+                            else
+                                sprite = GetTileNum(pos, GetNeighbours(pos));
                             break;
                         case ObjectList.blockTypeEnum.random:
                             sprite = Random.Range(0, temp.sprites.Count);
@@ -207,13 +212,74 @@ public class TileManager : MonoBehaviour
 
         return neighbour;
     }
+    public static int GetTileNum_New(Vector2Int coord, int[] neighbour)
+    {
+        int temp = 0;
+        int neighbourNum = 0;
+        int cornerNum = 0;
 
+        if (neighbour[1] == 1)
+            neighbourNum += 1;
+        if (neighbour[3] == 1)
+            neighbourNum += 2;
+        if (neighbour[4] == 1)
+            neighbourNum += 4;
+        if (neighbour[6] == 1)
+            neighbourNum += 8;
+
+        if (neighbour[0] == 1)
+            cornerNum += 1;
+        if (neighbour[2] == 1)
+            cornerNum += 2;
+        if (neighbour[5] == 1)
+            cornerNum += 4;
+        if (neighbour[7] == 1)
+            cornerNum += 8;
+        switch (neighbourNum)
+        {
+            case 12: temp = 0; if (neighbour[7] != 1) temp = 32; break;
+            case 14: temp = 1; if (neighbour[5] != 1) { if (neighbour[7] != 1) temp = 29; else temp = 41;} else if (neighbour[7] != 1) temp = 40; break;
+            case 10: temp = 2; if (neighbour[5] != 1) temp = 33; break;
+            case 0: temp = 3; break;
+            case 13: temp = 6; if (neighbour[2] != 1) { if (neighbour[7] != 1) temp = 28; else temp = 42; } else if (neighbour[7] != 1) temp = 44; break;
+            case 15: temp = 7;
+                switch (cornerNum)
+                {
+                    case 0: temp = 21; break;
+                    case 1: temp = 30; break;
+                    case 2: temp = 31; break;
+                    case 3: temp = 18; break;
+                    case 4: temp = 36; break;
+                    case 5: temp = 25; break;
+                    case 6: temp = 5; break;
+                    case 7: temp = 10; break;
+                    case 8: temp = 37; break;
+                    case 9: temp = 4; break;
+                    case 10: temp = 26; break;
+                    case 11: temp = 11; break;
+                    case 12: temp = 24; break;
+                    case 13: temp = 16; break;
+                    case 14: temp = 17; break;
+                }
+                break;
+            case 11: temp = 8; if (neighbour[0] != 1) { if (neighbour[5] != 1) temp = 35; else temp = 43; } else if (neighbour[5] != 1) temp = 45; break;
+            case 8: temp = 9; break;
+            case 5: temp = 12; if (neighbour[2] != 1) temp = 38; break;
+            case 7: temp = 13; if (neighbour[0] != 1) { if (neighbour[2] != 1) temp = 34; else temp = 47; } else if (neighbour[2] != 1) temp = 46; break;
+            case 3: temp = 14; if (neighbour[0] != 1) temp = 39; break;
+            case 9: temp = 15; break;
+            case 4: temp = 19; break;
+            case 6: temp = 20; break;
+            case 2: temp = 22; break;
+            case 1: temp = 27; break;
+
+            default: temp = 7; break;
+        }
+        return temp;
+    }
     public static int GetTileNum(Vector2Int coord, int[] neighbour)
     {
         int temp = 0;
-        
-
-        
 
         if (neighbour[1] == 1)
         {
@@ -351,7 +417,10 @@ public class TileManager : MonoBehaviour
                             break;
                         case ObjectList.blockTypeEnum.joined:
                             GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
-                            sprite = GetTileNum(pos, GetNeighbours(pos));
+                            if (temp.sprites.Count > 30)
+                                sprite = GetTileNum_New(pos, GetNeighbours(pos));
+                            else
+                                sprite = GetTileNum(pos, GetNeighbours(pos));
                             GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp.sprites[sprite];
                             break;
                         case ObjectList.blockTypeEnum.random:

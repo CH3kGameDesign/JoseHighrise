@@ -22,11 +22,14 @@ public class LevelCreator : MonoBehaviour
     [HideInInspector]
     public int objectChosen = 1;
     private int lastObjectChosen = 1;
+    private int lastBGChosen = 1;
     [HideInInspector]
     public Map curMap = new Map();
     public AnimationCurve showHideAnim;
     public AnimationCurve moveAnim;
     public Sprite emptyCell;
+    public enum drawTypeEnum { draw, background, erase};
+    public drawTypeEnum drawType = drawTypeEnum.draw;
     [System.Serializable]
     public class referenceClass
     {
@@ -77,17 +80,45 @@ public class LevelCreator : MonoBehaviour
         references.nameText.text = curMap.levelName;
         references.widthText.text = curMap.width.ToString();
         references.heightText.text = curMap.height.ToString();
-        RenderMap();
-        for (int i = 0; i < references.blockList.blocks.Count; i++)
+        RenderMap(0,true);
+        RenderMap(1, false);
+        UpdateItemList();
+    }
+
+    void UpdateItemList()
+    {
+        for (int i = references.scrollContent.childCount-1; i >= 0; i--)
+            GameObject.Destroy(references.scrollContent.GetChild(i).gameObject);
+
+        switch (drawType)
         {
-            Vector2 pos = new Vector2((i-(Mathf.Floor(i/3)*3))*70+40,-Mathf.Floor(i /3) * 70 - 40);
-            GameObject GO = Instantiate(references.scrollItemPrefab, references.scrollContent);
-            GO.transform.localPosition = pos;
-            GO.GetComponent<Image>().sprite = references.blockList.blocks[i].sprites[0];
-            int num = i;
-            GO.GetComponent<Button>().onClick.AddListener(delegate { ChangeItemType(num); });
+            case drawTypeEnum.draw:
+                for (int i = 0; i < references.blockList.blocks.Count; i++)
+                {
+                    Vector2 pos = new Vector2((i - (Mathf.Floor(i / 3) * 3)) * 70 + 40, -Mathf.Floor(i / 3) * 70 - 40);
+                    GameObject GO = Instantiate(references.scrollItemPrefab, references.scrollContent);
+                    GO.transform.localPosition = pos;
+                    GO.GetComponent<Image>().sprite = references.blockList.blocks[i].sprites[0];
+                    int num = i;
+                    GO.GetComponent<Button>().onClick.AddListener(delegate { ChangeItemType(num); });
+                }
+                references.scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(references.scrollContent.GetComponent<RectTransform>().sizeDelta.x, Mathf.Floor((references.blockList.blocks.Count) / 3) * 70 + 140);
+                break;
+            case drawTypeEnum.background:
+                for (int i = 0; i < references.blockList.bgTiles.Count; i++)
+                {
+                    Vector2 pos = new Vector2((i - (Mathf.Floor(i / 3) * 3)) * 70 + 40, -Mathf.Floor(i / 3) * 70 - 40);
+                    GameObject GO = Instantiate(references.scrollItemPrefab, references.scrollContent);
+                    GO.transform.localPosition = pos;
+                    GO.GetComponent<Image>().sprite = references.blockList.bgTiles[i].sprites[0];
+                    int num = i;
+                    GO.GetComponent<Button>().onClick.AddListener(delegate { ChangeItemType(num); });
+                }
+                references.scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(references.scrollContent.GetComponent<RectTransform>().sizeDelta.x, Mathf.Floor((references.blockList.bgTiles.Count) / 3) * 70 + 140);
+                break;
+            default:
+                break;
         }
-        references.scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(references.scrollContent.GetComponent<RectTransform>().sizeDelta.x, Mathf.Floor(references.blockList.blocks.Count/3) * 70 + 140);
     }
 
     // Update is called once per frame
@@ -107,26 +138,40 @@ public class LevelCreator : MonoBehaviour
         {
             if (hit.collider.tag == "LC_Tile")
             {
+                
                 string[] name = hit.collider.transform.parent.name.Split(new char[] { '[', ',', ']' });
                 Vector2Int location = new Vector2Int(int.Parse(name[1]), int.Parse(name[2]));
-                if (curMap.level[location.x, location.y] != objectChosen)
+                switch (drawType)
                 {
-                    curMap.level[location.x, location.y] = objectChosen;
-                    UpdateArea(location);
+                    case drawTypeEnum.background:
+                        if (curMap.bg[location.x, location.y] != objectChosen)
+                        {
+                            curMap.bg[location.x, location.y] = objectChosen;
+                            UpdateArea(location, 1);
+                        }
+                        break;
+                    default:
+                        if (curMap.level[location.x, location.y] != objectChosen)
+                        {
+                            curMap.level[location.x, location.y] = objectChosen;
+                            UpdateArea(location, 0);
+                        }
+                        break;
                 }
+                
             }
         }
     }
 
-    public void UpdateArea(Vector2Int pos)
+    public void UpdateArea(Vector2Int pos, int layerNum)
     {
         for (int x = Mathf.Max(pos.x - 1, 0); x < Mathf.Min(pos.x + 2, curMap.width); x++)
         {
             for (int y = Mathf.Max(pos.y - 1, 0); y < Mathf.Min(pos.y + 2, curMap.height); y++)
             {
-                Transform parent = transform.GetChild(0).GetChild(x).GetChild(y);
+                Transform parent = transform.GetChild(layerNum).GetChild(x).GetChild(y);
                 DeleteCell(parent);
-                RenderCell(new Vector2Int(x,y), parent);
+                RenderCell(new Vector2Int(x,y), parent, layerNum);
             }
         }
     }
@@ -137,23 +182,36 @@ public class LevelCreator : MonoBehaviour
             GameObject.Destroy(parent.GetChild(0).gameObject);
     }
 
-    public void RenderCell(Vector2Int pos, Transform parent)
+    public void RenderCell(Vector2Int pos, Transform parent, int layerNum)
     {
         GameObject GOBlock = Instantiate(references.blockPrefab, parent);
+        ObjectList.spriteClass block;
+        bool trueBlock;
+        if (layerNum == 0)
+            trueBlock = curMap.level[pos.x, pos.y] > 0;
+        else
+            trueBlock = curMap.bg[pos.x, pos.y] > 0;
 
         int sprite = 4;
-        if (curMap.level[pos.x, pos.y] > 0)
+        if (trueBlock)
         {
-            switch (references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].blockType)
+            if (layerNum == 0)
+                block = references.blockList.blocks[curMap.level[pos.x, pos.y] - 1];
+            else
+                block = references.blockList.bgTiles[curMap.bg[pos.x, pos.y] - 1];
+            switch (block.blockType)
             {
                 case ObjectList.blockTypeEnum.single:
                     sprite = 0;
                     break;
                 case ObjectList.blockTypeEnum.joined:
-                    sprite = TileManager.GetTileNum(pos, GetNeighbours(pos));
+                    if (block.sprites.Count > 30)
+                        sprite = TileManager.GetTileNum_New(pos, GetNeighbours(pos, layerNum));
+                    else
+                        sprite = TileManager.GetTileNum(pos, GetNeighbours(pos, layerNum));
                     break;
                 case ObjectList.blockTypeEnum.random:
-                    sprite = Random.Range(0, references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].sprites.Count);
+                    sprite = Random.Range(0, block.sprites.Count);
                     break;
                 case ObjectList.blockTypeEnum.hidden:
                     sprite = 0;
@@ -161,7 +219,7 @@ public class LevelCreator : MonoBehaviour
                 default:
                     break;
             }
-            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = references.blockList.blocks[curMap.level[pos.x, pos.y] - 1].sprites[sprite];
+            GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = block.sprites[sprite];
         }
         else
             GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = emptyCell;
@@ -281,7 +339,8 @@ public class LevelCreator : MonoBehaviour
         curMap.width = sizeTemp.x;
         curMap.height = sizeTemp.y;
         DeleteMap();
-        RenderMap();
+        RenderMap(0, true);
+        RenderMap(1, false);
     }
 
     public void UpdateMap()
@@ -290,19 +349,37 @@ public class LevelCreator : MonoBehaviour
         references.widthText.text = curMap.width.ToString();
         references.heightText.text = curMap.height.ToString();
         DeleteMap();
-        RenderMap();
+        RenderMap(0, true);
+        RenderMap(1, false);
     }
 
     void DeleteMap()
     {
-        if (transform.childCount > 0)
-            GameObject.Destroy(transform.GetChild(0).gameObject);
+        for (int i = transform.childCount-1; i >= 0; i++)
+        {
+            GameObject.Destroy(transform.GetChild(i).gameObject);
+        }
     }
-    void RenderMap()
+    void RenderMap(int layerNum, bool interactive)
     {
         GameObject GO = new GameObject();
         GO.transform.parent = transform;
-        GO.name = "TileMap";
+        GO.transform.localPosition = new Vector3(0, 0, layerNum);
+        GO.name = "TileMap " + layerNum;
+
+        int[,] map = new int[0, 0];
+        List<ObjectList.spriteClass> tiles = new List<ObjectList.spriteClass>();
+        if (layerNum == 0)
+        {
+            map = curMap.level;
+            tiles = references.blockList.blocks;
+        }
+        if (layerNum == 1)
+        {
+            map = curMap.bg;
+            tiles = references.blockList.bgTiles;
+        }
+
         for (int x = 0; x < curMap.width; x++)
         {
             GameObject GO1 = new GameObject();
@@ -318,18 +395,18 @@ public class LevelCreator : MonoBehaviour
                 GameObject GOBlock = Instantiate(references.blockPrefab, GO2.transform);
                 Vector2Int pos = new Vector2Int(x, y);
                 int sprite = 4;
-                if (curMap.level[x, y] > 0)
+                if (map[x, y] > 0)
                 {
-                    switch (references.blockList.blocks[curMap.level[x,y]-1].blockType)
+                    switch (tiles[map[x,y]-1].blockType)
                     {
                         case ObjectList.blockTypeEnum.single:
                             sprite = 0;
                             break;
                         case ObjectList.blockTypeEnum.joined:
-                            sprite = TileManager.GetTileNum(pos, GetNeighbours(pos));
+                            sprite = TileManager.GetTileNum(pos, GetNeighbours(pos, layerNum));
                             break;
                         case ObjectList.blockTypeEnum.random:
-                            sprite = Random.Range(0, references.blockList.blocks[curMap.level[x, y]-1].sprites.Count);
+                            sprite = Random.Range(0, tiles[map[x, y]-1].sprites.Count);
                             break;
                         case ObjectList.blockTypeEnum.hidden:
                             sprite = 0;
@@ -337,7 +414,7 @@ public class LevelCreator : MonoBehaviour
                         default:
                             break;
                     }
-                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = references.blockList.blocks[curMap.level[x, y] - 1].sprites[sprite];
+                    GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = tiles[map[x, y] - 1].sprites[sprite];
                 }
                 else
                     GOBlock.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = emptyCell;
@@ -345,10 +422,15 @@ public class LevelCreator : MonoBehaviour
             }
         }
     }
-    int[] GetNeighbours(Vector2Int coord)
+    int[] GetNeighbours(Vector2Int coord, int layerNum)
     {
         int[] neighbour = new int[8];
-        int key = curMap.level[coord.x, coord.y];
+        int[,] map;
+        if (layerNum == 0)
+            map = curMap.level;
+        else
+            map = curMap.bg;
+        int key = map[coord.x, coord.y];
 
         if (coord.x == 0)
         { neighbour[0] = -1; neighbour[3] = -1; neighbour[5] = -1; }
@@ -360,30 +442,53 @@ public class LevelCreator : MonoBehaviour
         { neighbour[0] = -1; neighbour[1] = -1; neighbour[2] = -1; }
 
         if (neighbour[0] != -1)
-            if (curMap.level[coord.x - 1, coord.y + 1] == key) neighbour[0] = 1;
+            if (map[coord.x - 1, coord.y + 1] == key) neighbour[0] = 1;
         if (neighbour[1] != -1)
-            if (curMap.level[coord.x, coord.y + 1] == key) neighbour[1] = 1;
+            if (map[coord.x, coord.y + 1] == key) neighbour[1] = 1;
         if (neighbour[2] != -1)
-            if (curMap.level[coord.x + 1, coord.y + 1] == key) neighbour[2] = 1;
+            if (map[coord.x + 1, coord.y + 1] == key) neighbour[2] = 1;
         if (neighbour[3] != -1)
-            if (curMap.level[coord.x - 1, coord.y] == key) neighbour[3] = 1;
+            if (map[coord.x - 1, coord.y] == key) neighbour[3] = 1;
         if (neighbour[4] != -1)
-            if (curMap.level[coord.x + 1, coord.y] == key) neighbour[4] = 1;
+            if (map[coord.x + 1, coord.y] == key) neighbour[4] = 1;
         if (neighbour[5] != -1)
-            if (curMap.level[coord.x - 1, coord.y - 1] == key) neighbour[5] = 1;
+            if (map[coord.x - 1, coord.y - 1] == key) neighbour[5] = 1;
         if (neighbour[6] != -1)
-            if (curMap.level[coord.x, coord.y - 1] == key) neighbour[6] = 1;
+            if (map[coord.x, coord.y - 1] == key) neighbour[6] = 1;
         if (neighbour[7] != -1)
-            if (curMap.level[coord.x + 1, coord.y - 1] == key) neighbour[7] = 1;
+            if (map[coord.x + 1, coord.y - 1] == key) neighbour[7] = 1;
 
         return neighbour;
+    }
+
+    void ChangeLayerOpacity(int layerNum, float tarOpacity)
+    {
+        for (int x = 0; x < curMap.width; x++)
+        {
+            for (int y = 0; y < curMap.height; y++)
+            {
+                transform.GetChild(layerNum).GetChild(x).GetChild(y).GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().color = new UnityEngine.Color(1,1,1,tarOpacity);
+            }
+        }
     }
 
     void ChangeItemType (int num)
     {
         objectChosen = num + 1;
-        lastObjectChosen = num + 1;
-        references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.blocks[num].sprites[0];
+        switch (drawType)
+        {
+            case drawTypeEnum.draw:
+                lastObjectChosen = num + 1;
+                references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.blocks[num].sprites[0];
+                break;
+            case drawTypeEnum.background:
+                lastBGChosen = num + 1;
+                references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.bgTiles[num].sprites[0];
+                break;
+            default:
+                break;
+        }
+        
         SetVisibleItemView(false);
     }
 
@@ -397,29 +502,52 @@ public class LevelCreator : MonoBehaviour
         if (draw)
         {
             references.drawText.text = "Draw";
+            drawType = drawTypeEnum.draw;
             objectChosen = lastObjectChosen;
+            references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.blocks[objectChosen].sprites[0];
+            ChangeLayerOpacity(0, 1);
         }
         else
         {
             objectChosen = 0;
+            drawType = drawTypeEnum.erase;
             references.drawText.text = "Erase";
+            ChangeLayerOpacity(0, 1);
         }
         references.itemPreview.SetActive(draw);
         references.scrollView.SetActive(false);
     }
     public void SetDrawType()
     {
-        if (objectChosen == 0)
+        switch (drawType)
         {
-            references.drawText.text = "Draw";
-            objectChosen = lastObjectChosen;
-            references.itemPreview.SetActive(true);
-        }
-        else
-        {
-            objectChosen = 0;
-            references.drawText.text = "Erase";
-            references.itemPreview.SetActive(false);
+            case drawTypeEnum.draw:
+                objectChosen = lastBGChosen;
+                references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.bgTiles[objectChosen - 1].sprites[0];
+                drawType = drawTypeEnum.background;
+                references.drawText.text = "BG";
+                references.itemPreview.SetActive(true);
+                ChangeLayerOpacity(0, 0.2f);
+                UpdateItemList();
+                break;
+            case drawTypeEnum.background:
+                objectChosen = 0;
+                drawType = drawTypeEnum.erase;
+                references.drawText.text = "Erase";
+                references.itemPreview.SetActive(false);
+                ChangeLayerOpacity(0, 1);
+                break;
+            case drawTypeEnum.erase:
+                references.drawText.text = "Draw";
+                drawType = drawTypeEnum.draw;
+                objectChosen = lastObjectChosen;
+                references.itemPreview.transform.GetChild(0).GetComponent<Image>().sprite = references.blockList.blocks[objectChosen - 1].sprites[0];
+                references.itemPreview.SetActive(true);
+                ChangeLayerOpacity(0, 1);
+                UpdateItemList();
+                break;
+            default:
+                break;
         }
         references.scrollView.SetActive(false);
     }
